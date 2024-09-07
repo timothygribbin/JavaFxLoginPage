@@ -69,7 +69,6 @@ public class DataCenter implements Serializable{
 	}
 	
 	public boolean validateLogin(String username, String password) {
-		
 		for(int i = 0; i < users.size(); i++) {
 			if(users.get(i).getUsername().equals(username) && users.get(i).getPassword().equals(password)) {
 				users.get(i).setFailedLoginAttempts(0);
@@ -80,7 +79,6 @@ public class DataCenter implements Serializable{
 	}
 	
 	public boolean findUserByUser(String username) {
-		
 		for(int i = 0; i < users.size(); i++) {
 			if(users.get(i).getUsername().equals(username)) {
 				return true;
@@ -90,7 +88,6 @@ public class DataCenter implements Serializable{
 	}
 	
 	public boolean findUserByEmail(String email) {
-		
 		for(int i = 0; i < users.size(); i++) {
 			if(users.get(i).getEmail().equals(email)) {
 				return true;
@@ -100,7 +97,6 @@ public class DataCenter implements Serializable{
 	}
 	
 	public User getUser(String username) {
-
 		for(int i = 0; i < users.size(); i++) {
 			if(users.get(i).getUsername().equals(username)) {
 				return users.get(i);
